@@ -14,12 +14,11 @@ def add_string(string_numbers):
         for number in numbers_after_split:
             newline_split_number = number.split('\n')
             if len(newline_split_number)>1:
-                if int(newline_split_number[0])<0:
-                    negative=True
-                    negative_numbers= negative_numbers+" "+newline_split_number[0]
-                if int(newline_split_number[1])<0:
-                    negative=True
-                    negative_numbers= negative_numbers+" "+newline_split_number[1]
+                for num in newline_split_number:
+                    if int(num) < 0:
+                        negative=True
+                        negative_numbers= negative_numbers+" "+num
+                
             elif int(number)<0:
                 negative=True
                 negative_numbers= negative_numbers+" "+number
@@ -32,7 +31,8 @@ def add_string(string_numbers):
         for number in numbers_after_split:
             newline_split_number = number.split('\n')
             if len(newline_split_number)>1:
-                result += int(newline_split_number[0]) + int(newline_split_number[1])
+                for num in newline_split_number:
+                    result+= int(num)
             else:
                 result += int(number)
         return result
