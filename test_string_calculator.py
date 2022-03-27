@@ -14,6 +14,10 @@ class TestStringCalculator(unittest.TestCase):
         self.assertEqual(add_string('5,10'),15)
         self.assertEqual(add_string('22,22'),44)
     
+    def test_add_string_two_numbers_return_sum_of_n_numbers(self):
+        self.assertEqual(add_string('5,10,20'),35)
+        self.assertEqual(add_string('10,20,30,40,50'),150)
+    
 
 if __name__ == '__main__':
     unittest.main()
