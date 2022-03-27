@@ -35,7 +35,7 @@ class TestStringCalculator(unittest.TestCase):
         self.assertEqual("negatives not allowed: -10",str(context.exception))
         with self.assertRaises(ValueError) as context:
             add_string('5,-10\n20,-8,-9,12')
-        self.assertEqual("negatives not allowed: -10 -8 -9 ",str(context.exception))
+        self.assertEqual("negatives not allowed: -10 -8 -9",str(context.exception))
             
 
 if __name__ == '__main__':
