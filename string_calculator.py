@@ -6,7 +6,7 @@ def add_string(string_numbers):
         delimiter=','
         if string_numbers[0]=='/' and string_numbers[1]=='/':
             delimiter = string_numbers[2]
-            string_numbers = string_numbers[3::]
+            string_numbers = string_numbers[4::]
 
         numbers_after_split = string_numbers.split(delimiter)
         result = 0

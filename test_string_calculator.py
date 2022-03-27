@@ -23,8 +23,8 @@ class TestStringCalculator(unittest.TestCase):
         self.assertEqual(add_string('10,20,30\n40,50'),150)
 
     def test_add_string_handle_any_delimiter_return_sum_of_n_numbers(self):
-        self.assertEqual(add_string('//;5;10;20'),35)
-        self.assertEqual(add_string('//-10-20-30\n40-50'),150)
+        self.assertEqual(add_string('//;\n5;10;20'),35)
+        self.assertEqual(add_string('//-\n10-20-30\n40-50'),150)
 
     
 
