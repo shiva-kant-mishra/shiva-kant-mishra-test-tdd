@@ -21,6 +21,8 @@ class TestStringCalculator(unittest.TestCase):
     def test_add_string_handle_newline_return_sum_of_n_numbers(self):
         self.assertEqual(add_string('5\n10,20'),35)
         self.assertEqual(add_string('10,20,30\n40,50'),150)
+        self.assertEqual(add_string('1,2\n3\n4,5'),15)
+        
 
     def test_add_string_handle_any_delimiter_return_sum_of_n_numbers(self):
         self.assertEqual(add_string('//;\n5;10;20'),35)
