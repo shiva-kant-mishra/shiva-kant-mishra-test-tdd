@@ -6,8 +6,8 @@ def add_string(string_numbers):
         numbers_after_split = string_numbers.split(",")
         result = 0
         for number in numbers_after_split:
-            if len(number.split("\n"))>1:
-                newline_split_number = number.split('\n')
+            newline_split_number = number.split('\n')
+            if len(newline_split_number)>1:
                 result += int(newline_split_number[0]) + int(newline_split_number[1])
             else:
                 result += int(number)
