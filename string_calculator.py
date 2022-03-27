@@ -3,7 +3,12 @@ def add_string(string_numbers):
         return 0
     
     else:
-        numbers_after_split = string_numbers.split(",")
+        delimiter=','
+        if string_numbers[0]=='/' and string_numbers[1]=='/':
+            delimiter = string_numbers[2]
+            string_numbers = string_numbers[3::]
+
+        numbers_after_split = string_numbers.split(delimiter)
         result = 0
         for number in numbers_after_split:
             newline_split_number = number.split('\n')
