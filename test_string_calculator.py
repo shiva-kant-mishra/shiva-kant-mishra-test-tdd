@@ -26,7 +26,14 @@ class TestStringCalculator(unittest.TestCase):
         self.assertEqual(add_string('//;\n5;10;20'),35)
         self.assertEqual(add_string('//-\n10-20-30\n40-50'),150)
 
-    
+    def test_add_string_negative_number_raise_value_error_with_number(self):
+        with self.assertRaises(ValueError) as context:
+            add_string('-5')
+        self.assertEqual("negatives not allowed: -5",str(context.exception))
+        with self.assertRaises(ValueError) as context:
+            add_string('5,-10\n20')
+        self.assertEqual("negatives not allowed: -10",str(context.exception))
+            
 
 if __name__ == '__main__':
     unittest.main()
