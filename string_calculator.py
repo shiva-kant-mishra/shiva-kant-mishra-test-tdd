@@ -13,7 +13,13 @@ def add_string(string_numbers):
         for number in numbers_after_split:
             newline_split_number = number.split('\n')
             if len(newline_split_number)>1:
+                if int(newline_split_number[0])<0:
+                    raise ValueError("negatives not allowed: "+newline_split_number[0])
+                if int(newline_split_number[1])<0:
+                    raise ValueError("negatives not allowed: "+newline_split_number[1])
                 result += int(newline_split_number[0]) + int(newline_split_number[1])
             else:
+                if int(number)<0:
+                    raise ValueError("negatives not allowed: "+number)
                 result += int(number)
         return result
