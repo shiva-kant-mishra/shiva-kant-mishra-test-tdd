@@ -5,4 +5,7 @@ def add_string(string_numbers):
         return int(string_numbers)
     else:
         numbers_after_split = string_numbers.split(",")
-        return int(numbers_after_split[0]) + int(numbers_after_split[1])
+        result = 0
+        for number in numbers_after_split:
+            result += int(number)
+        return result
